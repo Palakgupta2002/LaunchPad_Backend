@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 
 const app=express()
-app.listen(5000,()=>console.log("i am reached the location"))
+app.listen(process.env.PORT || 5000,()=>console.log("i am reached the location"))
 
 app.use(bodyParser.json());
 
